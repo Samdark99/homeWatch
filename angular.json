@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "homeWatch"
+    }
+  },
+  "defaultProject": "homeWatch",
+  "cli": {
+    "analytics": "98b68ca1-1bb0-4b5e-b378-6f7a5338164e"
+  }
 }

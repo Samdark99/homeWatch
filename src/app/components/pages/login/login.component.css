@@ -1,0 +1,42 @@
+/* Structure */
+.row{
+    height: 100vh;
+    background-color: #120b19;
+}
+
+h3{
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #aaaaaa;
+}
+
+/* Forms Styles */
+.form-style{
+    height: auto;
+    width: 100%;
+    padding: 0 30px;
+    background-color: #4f4065;
+    color: #ffffff;
+}
+
+/* Buttons */
+.btn{
+    color: #ffffff;
+    background-color: #e93578;
+    border-color: #b11d53;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Others Styles */
+.isIncorrect{
+    color: red;
+}
+
+.text-link{
+    color: #e93578;
+    text-decoration: none;
+    cursor: pointer;
+}
