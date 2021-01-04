@@ -1,8 +1,8 @@
-import { ABOUT, ADMIN, HOME, LOGIN } from "./paths";
+import { ABOUT, ADMIN, HOME, USER } from "./paths";
 
 export const USERROLE = {
     'role.admin': {
-        'urls': [ADMIN, ABOUT],
+        'urls': [ADMIN, ABOUT, USER],
         'homePage': ADMIN
     },
     'role.generalUser': {

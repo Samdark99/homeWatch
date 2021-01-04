@@ -25,7 +25,8 @@ export class RegisterComponent implements OnInit {
                      Validators.maxLength(50)]],
       'firstName': ['', [Validators.required, Validators.maxLength(50)]],
       'lastName': ['', [Validators.required, Validators.maxLength(50)]],
-      'birthDate': ['', Validators.required]
+      'birthDate': ['', Validators.required],
+      'salt': ['']
     });
   }
 

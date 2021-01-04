@@ -19,12 +19,21 @@
             <td>{{user.email}}</td>
             <td>{{user.roleId}}</td>
             <td>{{user.active}}</td>
-            <td></td>
+            <td>
+                <a class="btn btn-info mr-1"
+                   [routerLink]="['/user', user.id]">
+                   <i class="fa fa-pen"></i>
+                </a>
+                <a class="btn btn-danger"
+                   (click)="deleteTheUser(user.id)">
+                   <i class="fa fa-trash"></i>
+                </a>
+            </td>
         </tr>
     </tbody>
 </table>
 
-<div class="row">
+<div class="row text-center down">
     <div class="col-12">
         {{initialRange()}} - {{finalRange()}} of {{users.totalRecords}}
     </div>

@@ -40,6 +40,10 @@ export class AdminComponent implements OnInit {
       });
   }
 
+  deleteTheUser(id: string){
+    this.usersService.deleteUser(id).subscribe();
+  }
+
   //Pagination
   initialRange(): number{
     if(this.currentPage === 1){
