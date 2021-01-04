@@ -1,14 +1,16 @@
 <h3>Sign Up</h3>
 <div class="row d-flex justify-content-center align-items-center">
     <div class="col-4">
-        <form class="form-style" [formGroup]="registerForm" (ngSubmit)="register()">
+        <form class="form-style" [formGroup]="registerForm" (ngSubmit)="newRegister()">
             <div class="form-group pt-3">
                 <label>Email</label>
                 <input type="email"
                        class="form-control"
                        placeholder="Email"
                        formControlName="email"
-                       [class.is-invalid]="">
+                       [class.is-invalid]="emailInvalid">
+                <div *ngIf="emailInvalid"
+                     class="invalid-feedback">Enter Email Valid</div>
             </div>
             <div class="form-group mt-3">
                 <label>First Name</label>
@@ -16,7 +18,9 @@
                        class="form-control"
                        placeholder="First Name"
                        formControlName="firstName"
-                       [class.is-invalid]="">
+                       [class.is-invalid]="firstNameInvalid">
+                <div *ngIf="firstNameInvalid"
+                     class="invalid-feedback">Enter First Name Valid</div>
             </div>
             <div class="form group mt-3">
                 <label>Last Name</label>
@@ -24,14 +28,18 @@
                        class="form-control"
                        placeholder="Last Name"
                        formControlName="lastName"
-                       [class.is-invalid]>
+                       [class.is-invalid]="lastNameInvalid">
+                <div *ngIf="lastNameInvalid"
+                     class="invalid-feedback">Enter Last Name Valid</div>
             </div>
             <div class="form-group mt-3">
                 <label>Birthdate</label>
                 <input type="date"
                        class="form-control"
                        formControlName="birthDate"
-                       [class.is-invalid]="">
+                       [class.is-invalid]="birthDateInvalid">
+                <div *ngIf="birthDateInvalid"
+                     class="invalid-feedback">Select your birthdate</div>
             </div>
 
             <div class="form-group text-center mt-4 pb-4">

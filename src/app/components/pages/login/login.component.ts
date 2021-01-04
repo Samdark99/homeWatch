@@ -12,6 +12,7 @@ import { LogInService } from 'src/app/services/log-in.service';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
+  isIncorrect: boolean = false;
 
   constructor(private formBuilder: FormBuilder,
               private loginService: LogInService,
@@ -50,6 +51,8 @@ export class LoginComponent implements OnInit {
         this.router.navigate([HOME]);
       },() => {
         console.log("Hubo un error");
+        this.isIncorrect = false;
+        this.loginForm.markAsUntouched();
       });
   }
 }

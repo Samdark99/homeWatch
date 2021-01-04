@@ -1,11 +1,11 @@
 import { ABOUT, ADMIN, HOME, LOGIN } from "./paths";
 
 export const USERROLE = {
-    'Admin': {
+    'role.admin': {
         'urls': [ADMIN, ABOUT],
         'homePage': ADMIN
     },
-    'General': {
+    'role.generalUser': {
         'urls': [HOME, ABOUT],
         'homePage': HOME
     }

@@ -1,1 +1,49 @@
-<p>admin works!</p>
+<h3>Welcome to Home Watch HQ</h3>
+<hr />
+
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Role</th>
+            <th scope="col">Active</th>
+            <th scope="col">Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users.data; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{user.firstName}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.roleId}}</td>
+            <td>{{user.active}}</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="row">
+    <div class="col-12">
+        {{initialRange()}} - {{finalRange()}} of {{users.totalRecords}}
+    </div>
+    <div class="col-12">
+        <button (click)="getUsers(1)"
+                [disabled]="isOnTheFirstPage()">
+                <i class="fas fa-angle-double-left"></i>
+        </button>
+        <button (click)="getUsers(currentPage - 1)"
+                [disabled]="isOnTheFirstPage()">
+                <i class="fas fa-angle-left"></i>
+        </button>
+        <button (click)="getUsers(currentPage + 1)"
+                [disabled]="isOnTheFinalPage()">
+                <i class="fas fa-angle-right"></i>
+        </button>
+        <button (click)="getUsers(totalPages)"
+                [disabled]="isOnTheFinalPage()">
+                <i class="fas fa-angle-double-right"></i>
+        </button>
+    </div>
+</div>
